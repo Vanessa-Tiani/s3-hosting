@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: A simple EC2 instance from yaml file
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-051ed863837a0b1b6  # BEAUTY YAML
+      InstanceType: t2.micro
+      AvailabilityZone: us-west-1b
+      Tags:
+        - Key: Name
+          Value: Vanessa-ec2server 
+  KeyName:
+    Type: AWS::EC2::KeyPair
+    Properties:
+      KeyName: MyEC2KeyPair
+
+      
